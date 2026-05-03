@@ -1,0 +1,24 @@
+Trường hợp 1
+<input type="text" required value="">
+Kết quả: ❌ Không submit được. Trình duyệt báo phải điền trường này.
+Vì Thuộc tính required bắt buộc ô nhập không được để trống.
+
+Trường hợp 2
+<input type="email" value="abc">
+Kết quả: ❌ Không submit được. Báo email không đúng định dạng.
+Vì type="email" yêu cầu có dạng email hợp lệ (ví dụ abc@gmail.com). Chuỗi "abc" không có @ và tên miền.
+
+Trường hợp 3
+<input type="number" min="1" max="10" value="15">
+Kết quả: ❌ Không submit được. Báo giá trị phải nhỏ hơn hoặc bằng 10.
+Vì type="number" có giới hạn min="1" và max="10". Giá trị 15 vượt quá max.
+
+Trường hợp 4
+<input type="text" pattern="[0-9]{10}" value="abc123">
+Kết quả: ❌ Không submit được. Báo định dạng không khớp mẫu.
+Vì pattern="[0-9]{10}" nghĩa là phải đúng 10 chữ số liên tiếp. "abc123" chứa chữ cái và chỉ có 6 ký tự.
+
+Trường hợp 5
+<input type="password" minlength="8" value="123">
+Kết quả: ❌ Không submit được. Báo mật khẩu quá ngắn.
+Vì minlength="8" yêu cầu ít nhất 8 ký tự, nhưng "123" chỉ có 3 ký tự.
