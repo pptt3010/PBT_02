@@ -1,0 +1,66 @@
+1. Tại sao <label for="email"> quan trọng cho người dùng screen reader?
+<label> dùng để gắn nhãn mô tả cho ô nhập liệu.
+
+Ví dụ:
+<label for="email">Email</label>
+<input type="email" id="email">
+
+Ý nghĩa:
+Screen reader sẽ đọc: “Email, edit text” hoặc “Email, nhập văn bản”
+Người khiếm thị biết ô đó dùng để nhập gì.
+Khi bấm vào chữ Email, con trỏ tự focus vào ô input → dễ thao tác hơn.
+Nếu không có label:
+<input type="email">
+
+Screen reader chỉ đọc:
+edit text -> Người dùng không biết ô này nhập email, tên hay số điện thoại.
+
+
+
+2. Khi nào dùng <fieldset> + <legend>?
+Dùng khi có nhiều input liên quan cùng một nhóm thông tin.
+
+Ví dụ:
+Thông tin giao hàng
+Giới tính
+Phương thức thanh toán
+Sở thích
+
+Ví dụ cụ thể:
+<fieldset>
+    <legend>Phương thức thanh toán</legend>
+    <input type="radio" id="cod" name="pay">
+    <label for="cod">Thanh toán khi nhận hàng</label>
+    <input type="radio" id="bank" name="pay">
+    <label for="bank">Chuyển khoản</label>
+</fieldset>
+
+Lợi ích:
+Screen reader sẽ đọc:
+Phương thức thanh toán, nhóm lựa chọn...
+Người dùng hiểu các radio này thuộc cùng một nhóm.
+
+
+3. aria-label dùng khi nào?
+Dùng khi không có text label hiển thị trên màn hình, nhưng vẫn cần tên cho screen reader.
+
+Ví dụ:
+Nút chỉ có icon kính lúp:
+<button aria-label="Tìm kiếm">🔍</button>
+Người nhìn thấy icon hiểu là tìm kiếm, nhưng screen reader cần tên.
+
+
+
+4. Tại sao không nên dùng aria-label khi đã có <label>?
+Vì <label> là cách chuẩn semantic HTML, tốt hơn và đơn giản hơn.
+
+Ví dụ đã có:
+<label for="email">Email</label>
+<input id="email" type="email">
+thì không cần thêm:
+aria-label="Email"
+
+Lý do:
+Trùng lặp thông tin
+Có thể gây xung đột khi screen reader đọc
+HTML gốc luôn ưu tiên hơn ARIA
