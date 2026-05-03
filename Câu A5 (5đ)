@@ -1,0 +1,38 @@
+Cách 1: Chỉ dùng <img>
+<img src="product.jpg" alt="iPhone">
+Dùng khi ảnh đơn lẻ, chỉ để hiển thị hình ảnh, không cần chú thích riêng đi kèm.
+
+Dùng khi:
+Ảnh minh họa đơn giản
+Icon sản phẩm
+Logo thương hiệu
+Banner không cần caption
+Ví dụ thực tế:
+Ví dụ 1: Logo hãng Apple
+<img src="apple-logo.png" alt="Logo Apple">
+Ví dụ 2: Ảnh thumbnail sản phẩm trong danh sách
+<img src="iphone-thumb.jpg" alt="iPhone 16">
+
+
+Cách 2: Dùng <figure> + <figcaption>
+<figure>
+    <img src="product.jpg" alt="iPhone 16 Pro Max 256GB Titan">
+    <figcaption>iPhone 16 Pro Max — 25.990.000đ</figcaption>
+</figure>
+
+Dùng khi:
+Ảnh sản phẩm có tên + giá
+Ảnh bài viết có mô tả
+Biểu đồ có caption
+Ảnh hướng dẫn có chú thích
+Ví dụ thực tế:
+Ví dụ 1: Sản phẩm bán hàng
+<figure>
+    <img src="laptop.jpg" alt="Laptop Dell Inspiron 15">
+    <figcaption>Laptop Dell Inspiron 15 — 18.990.000đ</figcaption>
+</figure>
+Ví dụ 2: Biểu đồ doanh thu
+<figure>
+    <img src="chart-q1.png" alt="Biểu đồ doanh thu quý 1 năm 2026">
+    <figcaption>Doanh thu tăng 25% so với cùng kỳ.</figcaption>
+</figure>
