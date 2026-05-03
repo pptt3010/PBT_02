@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media.html</title>
+</head>
+<body>
+
+<h1>Trang giới thiệu sản phẩm</h1>
+
+
+<!-- Yêu cầu: SVG inline (logo đơn giản hình tròn) -->
+<h2>Logo thương hiệu</h2>
+
+<svg width="120" height="120">
+    <circle cx="60" cy="60" r="50" fill="blue"></circle>
+    <text x="35" y="68" fill="white" font-size="20">SHOP</text>
+</svg>
+
+
+<!-- Yêu cầu: Ít nhất 3 ảnh sản phẩm dùng <figure> + <figcaption>
+     Có loading="lazy"
+     Có alt mô tả đúng
+     Ảnh responsive: max-width:100%; height:auto; -->
+
+<h2>Hình ảnh sản phẩm</h2>
+
+<figure>
+    <img src="iphone16.jpg"
+         alt="Điện thoại iPhone 16 màu đen"
+         loading="lazy"
+         style="max-width:100%; height:auto;">
+    <figcaption>iPhone 16 màu đen</figcaption>
+</figure>
+
+<figure>
+    <img src="laptop.jpg"
+         alt="Laptop Dell màu bạc màn hình 15 inch"
+         loading="lazy"
+         style="max-width:100%; height:auto;">
+    <figcaption>Laptop Dell Inspiron</figcaption>
+</figure>
+
+<figure>
+    <img src="headphone.jpg"
+         alt="Tai nghe không dây màu trắng"
+         loading="lazy"
+         style="max-width:100%; height:auto;">
+    <figcaption>Tai nghe Bluetooth</figcaption>
+</figure>
+
+
+<!-- Yêu cầu: 1 video nhúng YouTube dùng <iframe> -->
+
+<h2>Video YouTube</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+
+
+<!-- Yêu cầu: 1 thẻ <video>
+     Có controls
+     Có poster
+     Có ít nhất 2 source (mp4 + webm) -->
+
+<h2>Video giới thiệu sản phẩm</h2>
+
+<video controls poster="poster.jpg" width="600">
+    <source src="product.mp4" type="video/mp4">
+    <source src="product.webm" type="video/webm">
+</video>
+
+
+<!-- Yêu cầu: 1 thẻ <audio> -->
+
+<h2>Nhạc nền giới thiệu</h2>
+
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.ogg" type="audio/ogg">
+</audio>
+
+</body>
+</html>
