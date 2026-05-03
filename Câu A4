@@ -1,0 +1,25 @@
+1. Thuộc tính loading="lazy" trên thẻ <img> dùng để trì hoãn tải ảnh cho đến khi ảnh gần xuất hiện trong vùng nhìn thấy của người dùng.
+Cải thiện: tăng tốc độ tải trang ban đầu, giảm băng thông, tối ưu hiệu năng trên mobile, cải thiện trải nghiệm người dùng.
+Không nên dùng khi: ảnh quan trọng ở đầu trang (hero image), logo, banner chính, ảnh cần hiển thị ngay khi mở trang.
+
+2. Nên cung cấp nhiều <source> trong thẻ <video> vì mỗi trình duyệt hỗ trợ định dạng video khác nhau. Nếu định dạng đầu không chạy được, trình duyệt sẽ thử source tiếp theo. Điều này giúp tăng khả năng tương thích trên nhiều thiết bị và trình duyệt.
++)3 format video web phổ biến:
+MP4 (video/mp4)
+WebM (video/webm)
+Ogg (video/ogg)
+
+Ví dụ:
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  <source src="video.ogv" type="video/ogg">
+</video>
+
+3. Thuộc tính alt trên <img> dùng để mô tả nội dung ảnh cho screen reader, hiển thị khi ảnh lỗi tải, và hỗ trợ SEO.
+Alt tốt cho 3 trường hợp:
+Ảnh sản phẩm iPhone 16
+alt="Điện thoại iPhone 16 màu đen, mặt trước và mặt sau"
+Ảnh trang trí (decorative)
+alt=""
+Ảnh biểu đồ doanh thu Q1/2026
+alt="Biểu đồ doanh thu quý 1 năm 2026 tăng dần từ tháng 1 đến tháng 3, cao nhất vào tháng 3"
