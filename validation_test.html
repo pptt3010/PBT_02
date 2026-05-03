@@ -1,3 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Test</title>
+</head>
+<body>
+
+<form>
+    <p>Trường hợp 1: required</p>
+    <input type="text" required value="" placeholder="Nhập nội dung">
+
+    <p>Trường hợp 2: email</p>
+    <input type="email" value="abc">
+
+    <p>Trường hợp 3: number min/max</p>
+    <input type="number" min="1" max="10" value="15">
+
+    <p>Trường hợp 4: pattern</p>
+    <input type="text" pattern="[0-9]{10}" value="abc123">
+
+    <p>Trường hợp 5: minlength</p>
+    <input type="password" minlength="8" value="123">
+
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
+
+
+
+
 <img width="458" height="646" alt="image" src="https://github.com/user-attachments/assets/9d1b47b2-8167-4e5c-a65b-41d5992fe178" />
 
 <img width="823" height="757" alt="image" src="https://github.com/user-attachments/assets/e7068d82-6206-42bd-ad85-e66292d5ec48" />
