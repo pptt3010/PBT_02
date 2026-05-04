@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout.html</title>
+</head>
+<body>
+
+<h1>Form Đặt Hàng Hoàn Chỉnh</h1>
+
+<form action="#" method="POST">
+
+<!-- ================================================= -->
+<!-- Yêu cầu Phần 1: Giỏ hàng dùng <table> -->
+<!-- ================================================= -->
+
+<h2>Giỏ hàng</h2>
+
+<table border="1" cellpadding="8">
+
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>iPhone 16</td>
+            <td>25.000.000</td>
+            <td>1</td>
+            <td>25.000.000</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Laptop Dell</td>
+            <td>18.000.000</td>
+            <td>1</td>
+            <td>18.000.000</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Tai nghe Bluetooth</td>
+            <td>2.000.000</td>
+            <td>2</td>
+            <td>4.000.000</td>
+        </tr>
+    </tbody>
+
+    <!-- Yêu cầu: Tổng cộng dùng <tfoot> với colspan -->
+    <tfoot>
+        <tr>
+            <td colspan="4"><strong>Tổng cộng</strong></td>
+            <td><strong>47.000.000</strong></td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<!-- Bonus: output hiển thị tổng tiền -->
+<p>
+    Tổng tiền:
+    <output>47.000.000 VNĐ</output>
+</p>
+
+
+<!-- ================================================= -->
+<!-- Bonus: datalist tìm kiếm sản phẩm -->
+<!-- ================================================= -->
+
+<h2>Tìm kiếm sản phẩm</h2>
+
+<label for="search">Tìm sản phẩm:</label>
+<input type="text" id="search" list="products" placeholder="Nhập tên sản phẩm">
+
+<datalist id="products">
+    <option value="iPhone 16">
+    <option value="Laptop Dell">
+    <option value="Tai nghe Bluetooth">
+</datalist>
+
+
+<!-- ================================================= -->
+<!-- Yêu cầu Phần 2: Form thanh toán -->
+<!-- ================================================= -->
+
+<h2>Thanh toán</h2>
+
+<label>Phương thức thanh toán:</label><br>
+
+<input type="radio" id="cod" name="payment">
+<label for="cod">COD</label>
+
+<input type="radio" id="bank" name="payment">
+<label for="bank">Chuyển khoản</label>
+
+<input type="radio" id="wallet" name="payment">
+<label for="wallet">Ví điện tử</label>
+
+<br><br>
+
+<label for="coupon">Mã giảm giá:</label><br>
+<input type="text"
+       id="coupon"
+       placeholder="SALE2026"
+       pattern="SALE[0-9]{4}">
+
+<br><br>
+
+<label for="note">Ghi chú:</label><br>
+<textarea id="note" rows="4" placeholder="Nhập ghi chú"></textarea>
+
+
+<!-- ================================================= -->
+<!-- Yêu cầu Phần 3: Thông tin giao hàng -->
+<!-- ================================================= -->
+
+<h2>Thông tin giao hàng</h2>
+
+<label for="delivery-date">Ngày giao hàng mong muốn:</label><br>
+<input type="date"
+       id="delivery-date"
+       min="2026-05-05">
+
+<br><br>
+
+<label for="time-slot">Khung giờ:</label><br>
+<select id="time-slot">
+    <option value="">Chọn khung giờ</option>
+    <option>Sáng 8-12h</option>
+    <option>Chiều 14-18h</option>
+    <option>Tối 18-21h</option>
+</select>
+
+<br><br>
+
+<label for="range-day">Thời gian giao hàng (ngày):</label><br>
+<input type="range"
+       id="range-day"
+       min="1"
+       max="7"
+       step="1">
+
+<br><br>
+
+<!-- Bonus: progress / meter điểm tích lũy -->
+<label>Điểm tích lũy:</label><br>
+<meter min="0" max="100" value="70"></meter>
+
+<br><br>
+
+<!-- Submit -->
+<button type="submit" aria-label="Xác nhận đặt hàng">
+    Đặt hàng
+</button>
+
+</form>
+
+</body>
+</html>
