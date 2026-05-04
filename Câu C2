@@ -1,0 +1,51 @@
+1. Pattern regex cho CMND/CCCD và Số tài khoản
+   CMND/CCCD đúng 12 chữ số
+   pattern="[0-9]{12}"
+   Giải thích:
+   Chỉ cho phép số từ 0–9
+   Đúng 12 chữ số
+   Số tài khoản từ 10 đến 15 chữ số
+   pattern="[0-9]{10,15}"
+   Giải thích:
+   Chỉ cho phép số
+   Tối thiểu 10 số, tối đa 15 số
+2. HTML5 validation đủ an toàn cho ứng dụng ngân hàng chưa?
+   Không đủ an toàn.
+   HTML5 validation chỉ là kiểm tra phía trình duyệt (client-side) để hỗ trợ người dùng nhập đúng định dạng.
+   Người dùng vẫn có thể:
+   Tắt validation trong browser
+   Sửa HTML bằng DevTools
+   Gửi request bằng Postman / API tool
+   Giả mạo dữ liệu
+   Vì vậy ứng dụng ngân hàng bắt buộc phải validate lại ở backend/server.
+3. 3 loại validation HTML5 KHÔNG THỂ làm được (cần JavaScript hoặc Backend)
+   a. So khớp 2 trường dữ liệu
+   Ví dụ:
+   Nhập lại mật khẩu phải giống mật khẩu
+   Nhập lại email phải trùng email
+   HTML thuần không so sánh được 2 input.
+   b. Kiểm tra dữ liệu tồn tại trong hệ thống
+   Ví dụ:
+   Email đã đăng ký chưa
+   CCCD đã có tài khoản chưa
+   Số tài khoản có tồn tại không
+   Phải gọi server/database.
+   c. Logic nghiệp vụ phức tạp
+   Ví dụ:
+   Người dưới 18 tuổi không mở tài khoản
+   PIN không được trùng ngày sinh
+   CCCD phải hợp lệ theo checksum quốc gia
+   HTML pattern không xử lý tốt.
+4. 2 rủi ro bảo mật nếu chỉ validate Frontend mà không validate Backend
+   a. Hacker bypass validation gửi dữ liệu độc hại
+   Ví dụ:
+   SQL Injection
+   Script độc
+   Dữ liệu rác
+   Do backend không kiểm tra lại.
+   b. Gửi dữ liệu sai quy tắc hệ thống
+   Ví dụ:
+   PIN chỉ 2 số
+   Số tài khoản dài 100 ký tự
+   Email giả
+   Có thể gây lỗi hệ thống hoặc chiếm tài khoản.
